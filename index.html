@@ -33,38 +33,34 @@
                     </div>
 </section>
 <script>
-var ms = 0, sec=0, min=0, hrs=0;
 var intervalMs;
+var msDec;
+var sec;
+var min;
+var hrs;
+var startTime = Date.now();
 const start =()=>{
-const timer=()=>{
-    debugger;
-    ms++
-    console.log('ms',ms,'sec',sec,'min',min)
-    document.getElementById("milliseconds").innerHTML = ms;
-    if(ms===1000){
-        sec++
-        document.getElementById("seconds").innerHTML = sec;
-        ms=0
-    }
-    if(sec===60){
-        min++
-        document.getElementById("minutes").innerHTML = min;
-        sec=0
-    }
-    if(min===60){
-        hrs++
-        document.getElementById("hours").innerHTML = hrs;
-        hrs=0
-    }
-}
-intervalMs = setInterval(timer, 1)}
+intervalMs = setInterval(function() {
+    ms = Date.now() - startTime;
+    msDec=(ms / 1000).toFixed(3).toString().split('.')[1]
+    sec = Math.floor(ms / 1000);
+    min = Math.floor(sec / 60);
+    hrs = Math.floor(min/ 60);
+    sec= sec% 60;
+    min = min % 60;
+    hrs = hrs% 24;
+    document.getElementById("milliseconds").innerHTML =msDec;
+    document.getElementById("seconds").innerHTML =sec;
+    document.getElementById("minutes").innerHTML =min;
+    document.getElementById("hours").innerHTML =hrs;
+    }, 100);}
 const stop = ()=>{
     console.log(sec,ms,min,hrs)
     clearInterval(intervalMs)
 }
 const addLap =()=>{
     const liEL=document.createElement('li')
-    liEL.innerHTML=hrs+"hrs "+min+"min "+sec+"sec "+ms+"ms "
+    liEL.innerHTML=hrs+"hrs "+min+"min "+sec+"sec "+msDec+"ms "
     document.getElementById('laps_list').appendChild(liEL)
 }
 
