@@ -1,0 +1,138 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+div, section, footer {
+    display: block;
+}
+body {
+display: block;
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+
+#layout-header
+{text-align: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  background: #007FFF;
+}
+img {
+vertical-align: middle;
+border-style: none;
+width: 130px;
+}
+.main-cont {
+  background: #FFF;
+  border-radius: 5px;
+  box-shadow: 0 35px 55px 0 rgb(0 0 0 / 5%);
+  margin-top: -54px;
+  padding-bottom: 20px;
+  width: 600px;
+  position: fixed;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+.tab-menu {
+  text-align: center;
+  border-bottom: 1px solid #EEE;
+}
+.tab-menu .item {
+  display: inline-block;
+}
+.tab-menu .item a {
+  margin: 0 5px;
+  padding: 15px 30px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  color: #797F89;
+  transition: color 0.2s ease-in;
+}
+.tab-menu .active-item a {
+  color: #007FFF;
+  font-weight: 600;
+  border-bottom: 2px solid #007FFF;
+}
+a {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.stopw-cont {
+  text-align: center;
+  padding-bottom: 70px;
+}
+.stopw-cont .unit {
+  display: inline-block;
+  margin: 30px 15px;
+}
+.stopw-cont .unit h2 {
+  display: inline-block;
+  font-family: 'Roboto Mono',monospace;
+  font-size: 50px;
+  font-weight: 300;
+  color: #383E47;
+}
+.stopw-cont .unit label {
+  margin-left: 5px;
+  font-size: 15px;
+  color: #383E47;
+}
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.content p {
+  font-size: 17px;
+  color: #383E47;
+}
+.content.px-5.py-3 {
+    padding-bottom: 3rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+}
+
+footer {
+  padding: 20px 0;
+  margin-top: 100px;
+  background: #FFF;
+}
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+footer .footer-logo {
+  display: inline-block;
+}
+footer .footer-logo img {
+  height: 35px;
+}
+footer .footer-logo {
+  display: inline-block;
+}
+.lap {
+  display: block;
+}
+.lap h3{
+    text-align: center;
+}
